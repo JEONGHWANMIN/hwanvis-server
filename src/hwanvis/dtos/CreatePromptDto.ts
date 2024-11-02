@@ -1,4 +1,4 @@
-interface GptMessage {
+export interface GptMessage {
   role: string;
   content: string;
 }

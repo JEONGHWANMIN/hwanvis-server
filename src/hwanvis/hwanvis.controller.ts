@@ -9,7 +9,7 @@ export class HwanvisController {
   ) {}
 
   @Post('/')
-  async createPrompt(@Body() createPromptDto: CreatePromptDto) {
-    return await this.aiService.createPrompt(createPromptDto);
+  createPrompt(@Body() createPromptDto: CreatePromptDto) {
+    return this.aiService.createPrompt(createPromptDto);
   }
 }
