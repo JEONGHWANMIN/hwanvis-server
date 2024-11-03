@@ -2,7 +2,7 @@ import { Body, Controller, Inject, Post } from '@nestjs/common';
 import { CreatePromptDto } from './dtos/CreatePromptDto';
 import { AiServiceInterface } from './AiServiceInterface';
 
-@Controller('hwanvis')
+@Controller('api/hwanvis')
 export class HwanvisController {
   constructor(
     @Inject('AiService') private readonly aiService: AiServiceInterface,

@@ -14,7 +14,7 @@ export class GptService implements AiServiceInterface {
     const { apiKey, messages } = createPromptDto;
     try {
       const response = await this.sendRequest(apiKey, messages);
-      return response.data;
+      return response.data?.choices[0];
     } catch (error) {
       console.error('GPT API 호출 실패:', error);
       throw new InternalServerErrorException(
