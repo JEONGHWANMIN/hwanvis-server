@@ -6,9 +6,9 @@ async function bootstrap() {
 
   // CORS 설정
   app.enableCors({
-    origin: 'https://hwavis.vercel.app', // React 앱의 주소
+    origin: ['https://hwavis.vercel.app', 'http://localhost:3000'], // 여러 도메인 허용
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // 인증 정보(쿠키 등) 허용
+    credentials: true,
   });
 
   await app.listen(8080);
