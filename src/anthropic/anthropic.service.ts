@@ -20,6 +20,7 @@ export class AnthropicService implements AiServiceInterface {
       return {
         role: response.data?.role,
         content: response.data?.content[0]?.text,
+        model: 'claude',
       };
     } catch (error) {
       console.error('Anthropic API 호출 실패:', error.response.data);

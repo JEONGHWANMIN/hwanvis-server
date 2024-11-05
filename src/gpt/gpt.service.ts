@@ -16,6 +16,7 @@ export class GptService implements AiServiceInterface {
       return {
         role: response.data?.choices?.[0]?.message?.role,
         content: response.data?.choices?.[0]?.message?.content,
+        model: 'gpt',
       };
     } catch (error) {
       console.error('GPT API 호출 실패:', error.response.data);
