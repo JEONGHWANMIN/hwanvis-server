@@ -3,7 +3,7 @@ import { HwanvisModule } from './hwanvis/hwanvis.module';
 import { GptModule } from './gpt/gpt.module';
 
 @Module({
-  imports: [HwanvisModule, GptModule],
+  imports: [HwanvisModule, GptModule,],
   controllers: [],
   providers: [],
 })

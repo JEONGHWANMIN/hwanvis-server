@@ -3,7 +3,10 @@ export interface GptMessage {
   content: string;
 }
 
+export type AiType = 'gpt' | 'claude';
+
 export class CreatePromptDto {
   apiKey: string;
   messages: GptMessage[];
+  type?: AiType;
 }
